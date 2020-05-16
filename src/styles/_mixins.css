@@ -10,7 +10,7 @@
 }
 
 /* Grid layout */
-@define-mixin grid $rows, $gap: 1.5rem {
+@define-mixin grid $rows, $gap: var(--spacing3) {
   display: grid;
   grid-gap: $gap;
   grid-template-columns: repeat(8, 1fr);

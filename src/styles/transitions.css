@@ -1,7 +1,6 @@
 /*
  * Fade
  */
-
 .trans-fade-enter-active,
 .trans-fade-leave-active {
   transition-duration: .2s;
