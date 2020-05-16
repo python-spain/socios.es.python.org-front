@@ -1,0 +1,15 @@
+/*
+ * Fade
+ */
+
+.trans-fade-enter-active,
+.trans-fade-leave-active {
+  transition-duration: .2s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.trans-fade-enter,
+.trans-fade-leave-active {
+  opacity: 0;
+}

@@ -1,0 +1,12 @@
+:root {
+  /* Core */
+  --color-black: #000;
+  --color-white: #fff;
+
+  /* Primary */
+
+  /* Gray */
+  --color-grayscale700: #151515;
+  --color-grayscale500: #515151;
+  --color-grayscale200: #cacaca;
+}

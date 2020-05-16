@@ -1,0 +1,35 @@
+:root {
+  /* SIZES (1rem is 16px) */
+  --font-size-1400: 7rem;   /* 112 px */
+  --font-size-1300: 6rem;   /* 96 px */
+  --font-size-1200: 5rem;   /* 80 px */
+  --font-size-1100: 4rem;   /* 64 px */
+  --font-size-1000: 3rem;   /* 48 px */
+  --font-size-900: 2.25rem; /* 36 px */
+  --font-size-800: 2rem;    /* 32 px */
+  --font-size-700: 1.75rem; /* 28 px */
+  --font-size-600: 1.5rem;  /* 24 px */
+  --font-size-500: 1.25rem; /* 20 px */
+  --font-size-400: 1rem;    /* 16 px */
+  --font-size-300: .75rem;  /* 12 px */
+
+  /* Logo */
+
+  /*
+  --font-family-logo: "Pacifico", sans-serif;
+  --font-weight-logo: 400;
+  --font-variant-logo: normal;
+  --font-size-logo: var(--font-size-900);
+  --line-height-logo: var(--font-size-1000);
+  */
+
+  /* Heading 1 */
+
+  /*
+  --font-family-heading-1: "Fira Sans", sans-serif;
+  --font-weight-heading-1: 300;
+  --font-variant-heading-1: normal;
+  --font-size-heading-1: var(--font-size-1200);
+  --line-height-heading-1: var(--font-size-1300);
+  */
+}

@@ -1,0 +1,19 @@
+/* Typography */
+@define-mixin typography $type, $color: grayscale700 {
+  color: var(--color-$color);
+  font-family: var(--font-family-$type);
+  font-size: var(--font-size-$type);
+  font-variant: var(--font-variant-$type);
+  font-weight: var(--font-weight-$type);
+  line-height: var(--line-height-$type);
+  @mixin-content;
+}
+
+/* Grid layout */
+@define-mixin grid $rows, $gap: 1.5rem {
+  display: grid;
+  grid-gap: $gap;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+  @mixin-content;
+}

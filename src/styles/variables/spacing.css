@@ -1,0 +1,19 @@
+:root {
+  --spacing-base: .5rem;
+  --spacing1: var(--spacing-base);
+  --spacing2: calc(var(--spacing-base) * 2);   /* 1rem */
+  --spacing3: calc(var(--spacing-base) * 3);
+  --spacing4: calc(var(--spacing-base) * 4);   /* 2rem */
+  --spacing5: calc(var(--spacing-base) * 5);
+  --spacing6: calc(var(--spacing-base) * 6);   /* 3rem */
+  --spacing7: calc(var(--spacing-base) * 7);
+  --spacing8: calc(var(--spacing-base) * 8);   /* 4rem */
+  --spacing9: calc(var(--spacing-base) * 9);
+  --spacing10: calc(var(--spacing-base) * 10); /* 5rem */
+  --spacing11: calc(var(--spacing-base) * 11);
+  --spacing12: calc(var(--spacing-base) * 12); /* 6rem */
+  --spacing13: calc(var(--spacing-base) * 13);
+  --spacing14: calc(var(--spacing-base) * 14); /* 7rem */
+  --spacing15: calc(var(--spacing-base) * 15);
+  --spacing16: calc(var(--spacing-base) * 16); /* 8rem */
+}
