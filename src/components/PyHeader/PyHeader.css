@@ -1,0 +1,22 @@
+.host-pyheader {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & .logo {
+    height: 3rem;
+  }
+
+  & .title {
+    @mixin typography heading-1;
+
+    flex: 1;
+    margin: 0 var(--spacing6);
+    text-align: left;
+  }
+
+  & .nav {
+    @mixin typography menu;
+  }
+}

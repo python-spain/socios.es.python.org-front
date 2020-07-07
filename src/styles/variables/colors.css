@@ -1,3 +1,7 @@
+/* WARNING: This file is prepended to every CSS file */
+
+/* WARNING: Only add code that does not generate actual CSS */
+
 :root {
   /* Core */
   --color-black: #000;
@@ -28,10 +32,10 @@
   --color-blue100: #a1cfe4;
 
   /* Green */
-  --color-blue700: #667804;
-  --color-blue500: #8ea604;
-  --color-blue300: #adc127;
-  --color-blue100: #d7e457;
+  --color-green700: #667804;
+  --color-green500: #8ea604;
+  --color-green300: #adc127;
+  --color-green100: #d7e457;
 
   /* Gray */
   --color-grayscale700: #2c2c2c;

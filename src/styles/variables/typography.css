@@ -1,3 +1,7 @@
+/* WARNING: This file is prepended to every CSS file */
+
+/* WARNING: Only add code that does not generate actual CSS */
+
 :root {
   /* SIZES (1rem is 16px) */
   --font-size-1400: 7rem;   /* 112 px */
@@ -13,23 +17,80 @@
   --font-size-400: 1rem;    /* 16 px */
   --font-size-300: .75rem;  /* 12 px */
 
-  /* Logo */
-
-  /*
-  --font-family-logo: "Pacifico", sans-serif;
-  --font-weight-logo: 400;
-  --font-variant-logo: normal;
-  --font-size-logo: var(--font-size-900);
-  --line-height-logo: var(--font-size-1000);
-  */
-
   /* Heading 1 */
-
-  /*
-  --font-family-heading-1: "Fira Sans", sans-serif;
-  --font-weight-heading-1: 300;
+  --font-family-heading-1: "Montserrat", sans-serif;
+  --font-weight-heading-1: 400;
   --font-variant-heading-1: normal;
-  --font-size-heading-1: var(--font-size-1200);
-  --line-height-heading-1: var(--font-size-1300);
-  */
+  --font-size-heading-1: var(--font-size-700);
+  --line-height-heading-1: var(--font-size-900);
+
+  /* Heading 2 */
+  --font-family-heading-2: "Montserrat", sans-serif;
+  --font-weight-heading-2: 400;
+  --font-variant-heading-2: normal;
+  --font-size-heading-2: var(--font-size-600);
+  --line-height-heading-2: var(--font-size-700);
+
+  /* Heading 3 */
+  --font-family-heading-3: "Montserrat", sans-serif;
+  --font-weight-heading-3: 400;
+  --font-variant-heading-3: all-small-caps;
+  --font-size-heading-3: var(--font-size-500);
+  --line-height-heading-3: var(--font-size-600);
+
+  /* Heading 4 */
+  --font-family-heading-4: "Montserrat", sans-serif;
+  --font-weight-heading-4: 400;
+  --font-variant-heading-4: normal;
+  --font-size-heading-4: var(--font-size-400);
+  --line-height-heading-4: var(--font-size-500);
+
+  /* Body 1 */
+  --font-family-body-1: "Fira Sans", sans-serif;
+  --font-weight-body-1: 400;
+  --font-variant-body-1: normal;
+  --font-size-body-1: var(--font-size-400);
+  --line-height-body-1: var(--font-size-600);
+
+  /* Body 2 */
+  --font-family-body-2: "Fira Sans", sans-serif;
+  --font-weight-body-2: 400;
+  --font-variant-body-2: normal;
+  --font-size-body-2: var(--font-size-300);
+  --line-height-body-2: var(--font-size-400);
+
+  /* Numbers 1 */
+  --font-family-numbers-1: "Fira Sans", sans-serif;
+  --font-weight-numbers-1: 400;
+  --font-variant-numbers-1: normal;
+  --font-size-numbers-1: var(--font-size-600);
+  --line-height-numbers-1: var(--font-size-800);
+
+  /* Numbers 2 */
+  --font-family-numbers-2: "Fira Sans", sans-serif;
+  --font-weight-numbers-2: 500;
+  --font-variant-numbers-2: normal;
+  --font-size-numbers-2: var(--font-size-500);
+  --line-height-numbers-2: var(--font-size-600);
+
+  /* Numbers 3 */
+  --font-family-numbers-3: "Fira Sans", sans-serif;
+  --font-weight-numbers-3: 500;
+  --font-variant-numbers-3: normal;
+  --font-size-numbers-3: var(--font-size-400);
+  --line-height-numbers-3: var(--font-size-600);
+
+  /* Menu */
+  --font-family-menu: "Montserrat", sans-serif;
+  --font-weight-menu: 500;
+  --font-variant-menu: normal;
+  --font-size-menu: var(--font-size-400);
+  --line-height-menu: var(--font-size-500);
+
+  /* Button */
+  --font-family-button: "Montserrat", sans-serif;
+  --font-weight-button: 600;
+  --font-variant-button: normal;
+  --font-size-button: var(--font-size-400);
+  --line-height-button: var(--font-size-500);
 }

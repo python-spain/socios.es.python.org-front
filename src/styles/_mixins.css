@@ -1,3 +1,7 @@
+/* WARNING: This file is prepended to every CSS file */
+
+/* WARNING: Only add code that does not generate actual CSS */
+
 /* Typography */
 @define-mixin typography $type, $color: grayscale700 {
   color: var(--color-$color);

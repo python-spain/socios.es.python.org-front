@@ -1,3 +1,33 @@
 {
-  "message": "hello i18n !!"
+  "COMMONS": {
+    "HEADER": {
+      "TITLE": "Portal de Socies",
+      "NAV": {
+        "HOME": "Home",
+        "ABOUT": "Sobre la asociación",
+        "NEW_PARTNER": "Quiero ser socie"
+      }
+    }
+  },
+  "VIEWS": {
+    "NEW_PARTNER": {
+      "TITLE": "¿Quieres ser socie?",
+      "FORM": {
+        "INPUT_FULL_NAME_LABEL": "Tu nombre y apellidos",
+        "INPUT_FULL_NAME_PLACEHOLDER": "Ex. 'Guido van Rossum'",
+        "INPUT_EMAIL_LABEL": "Un email válido",
+        "INPUT_EMAIL_PLACEHOLDER": "Ex. guido@python.org",
+        "INPUT_NIF_LABEL": "Tu DNI, NIF o NIE",
+        "INPUT_NIF_PLACEHOLDER": "Ex '12345678Z'",
+        "INPUT_FILE_NIF_LABEL": "Fichero con tu DNI, NIF o NIE",
+        "INPUT_BANK_ACCOUNT_LABEL": "El IBAN de tu cuenta donde relaizaremos la domiciliación",
+        "INPUT_BANK_ACCOUNT_PLACEHOLDER": "Ex 'ES0011112222333344445555'",
+        "INPUT_FILE_PAYMENT_LABEL": "Fichero con el comprobante del pago de la primera cuota",
+        "INPUT_COMMENT_LABEL": "Y puedes dejarno un comentario.",
+        "INPUT_COMMENT_PLACEHOLDER": "Puedes contarnos por qué quieres pertenecer a la asociación o qué te gusta de Python :-)",
+        "BUTTON_RESET": "Borrar todo",
+        "BUTTON_SUBMIT": "Enviar"
+      }
+    }
+  }
 }

@@ -1,0 +1,26 @@
+.host-new-partner {
+  display: block;
+}
+
+.form {
+  display: block;
+  padding: var(--spacing2);
+
+  & .fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing3) 0;
+    max-width: 50rem;
+  }
+
+  & .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: var(--spacing6) 0;
+    max-width: 50rem;
+
+    & :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

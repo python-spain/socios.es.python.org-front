@@ -1,3 +1,15 @@
+/* WARNING: This file is prepended to every CSS file */
+
+/* WARNING: Only add code that does not generate actual CSS */
+
 @custom-media --viewport-mobile (width < 768px);  /* Default */
 @custom-media --viewport-tablet (width >= 768px);
 @custom-media --viewport-pc (width >= 1025px);
+
+/*
+ * xsmall 	<600px
+ * small 	  <960px
+ * medium 	<1280px
+ * large 	  <1920px
+ * xlarge  >=1920px
+ */

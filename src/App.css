@@ -1,18 +1,52 @@
-.host-app {
-  color: #2c3e50;
-  font-family: "Avenir", "Helvetica", "Arial", sans-serif;
-  text-align: center;
+/*
+  Global styles for the whole app.
+  Inserted on app component.
+*/
+
+/* CSS reset */
+@import "normalize.css";
+
+/* Font faces */
+@import "./styles/fonts.css";
+
+/* Transitions */
+@import "./styles/transitions.css";
+
+/* For layout purposes */
+html,
+body {
+  @mixin typography body-1;
+
+  height: 100%;
 }
 
-.nav {
-  padding: 30px;
+* {
+  box-sizing: border-box;
 }
 
-.nav a {
-  color: #2c3e50;
+a {
+  color: var(--color-primary700);
   font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-primary500);
+    text-decoration: underline;
+  }
+
+  &.router-link-exact-active {
+    color: var(--color-secondary700);
+    text-decoration: underline;
+  }
 }
 
-.nav a.router-link-exact-active {
-  color: #42b983;
+/* Main App */
+.host-app {
+  & .header {
+    margin: var(--spacing4) var(--spacing12);
+  }
+
+  & .layout {
+    margin: var(--spacing8) var(--spacing16);
+  }
 }

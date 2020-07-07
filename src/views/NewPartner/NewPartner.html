@@ -1,0 +1,70 @@
+<div class="host-new-partner">
+  <h2>{{ $t('TITLE') }}</h2>
+  <form class="form">
+    <div class="fieldset">
+      <label for="full_name">{{ $t('FORM.INPUT_FULL_NAME_LABEL') }}</label>
+      <input
+        id="full_name"
+        name="full_name"
+        type="text"
+        required
+        :placeholder="$t('FORM.INPUT_FULL_NAME_PLACEHOLDER')"/>
+    </div>
+    <div class="fieldset">
+      <label for="email">{{ $t('FORM.INPUT_EMAIL_LABEL') }}</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        :placeholder="$t('FORM.INPUT_EMAIL_PLACEHOLDER')"/>
+    </div>
+    <div class="fieldset">
+      <label for="nif">{{ $t('FORM.INPUT_NIF_LABEL') }}</label>
+      <input
+        id="nif"
+        name="nif"
+        type="text"
+        required
+        :placeholder="$t('FORM.INPUT_NIF_PLACEHOLDER')"/>
+    </div>
+    <div class="fieldset">
+      <label for="file_nif">{{ $t('FORM.INPUT_FILE_NIF_LABEL') }}</label>
+      <input
+        id="filr_nif"
+        name="file_nif"
+        type="file"
+        multiple
+        required />
+    </div>
+    <div class="fieldset">
+      <label for="banck_account">{{ $t('FORM.INPUT_BANK_ACCOUNT_LABEL') }}</label>
+      <input
+        id="banck_account"
+        name="banck_account"
+        type="text"
+        required
+        :placeholder="$t('FORM.INPUT_BANK_ACCOUNT_PLACEHOLDER')"/>
+    </div>
+    <div class="fieldset">
+      <label for="file_payment">{{ $t('FORM.INPUT_FILE_PAYMENT_LABEL') }}</label>
+      <input
+        id="filr_payment"
+        name="file_payment"
+        type="file"
+        required />
+    </div>
+    <div class="fieldset">
+      <label for="coment">{{ $t('FORM.INPUT_COMMENT_LABEL') }}</label>
+      <textarea
+        id="comment"
+        name="comment"
+        rows="8"
+        :placeholder="$t('FORM.INPUT_COMMENT_PLACEHOLDER')"/>
+    </div>
+    <div class="actions">
+      <button type="reset">{{ $t("FORM.BUTTON_RESET")}}</button>
+      <button type="submit">{{ $t("FORM.BUTTON_SUBMIT")}}</button>
+    </div>
+  </form>
+</div>
