@@ -10,7 +10,7 @@ import newPartnerStore from './NewPartner.store'
 
 @Component
 export default class NewPartner extends Vue {
-  public readonly rootI18nKey = 'VIEWS.NEW_PARTNER';
+  public readonly rootI18nKey = 'VIEWS.NEW_PARTNER'
 
   public data: PartnerCreationData = {
     name: '',
@@ -19,10 +19,14 @@ export default class NewPartner extends Vue {
     phone: '',
     banckAccount: '',
     comment: ''
-  };
+  }
 
-  get isLoading () {
-    return newPartnerStore.isLoading
+  public isLoading = false
+
+  public async handleSubmit () {
+    this.isLoading = true
+    await newPartnerStore.createNewPartner(this.data)
+    this.isLoading = false
   }
 }
 </script>

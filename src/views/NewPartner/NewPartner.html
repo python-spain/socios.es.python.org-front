@@ -1,6 +1,9 @@
 <div class="host-new-partner">
   <h2>{{ $t('TITLE') }}</h2>
-  <form class="form">
+  <form
+   class="form"
+   autocomplete="off"
+   @submit.prevent="handleSubmit()">
     <div class="fieldset">
       <label for="full_name">{{ $t('FORM.INPUT_FULL_NAME_LABEL') }}</label>
       <input
@@ -72,8 +75,8 @@
         :placeholder="$t('FORM.INPUT_COMMENT_PLACEHOLDER')"/>
     </div>
     <div class="actions">
-      <button type="reset">{{ $t("FORM.BUTTON_RESET")}}</button>
-      <button type="submit">{{ $t("FORM.BUTTON_SUBMIT")}}</button>
+      <button type="reset" :disabled="isLoading">{{ $t("FORM.BUTTON_RESET")}}</button>
+      <button type="submit" :disabled="isLoading">{{ $t("FORM.BUTTON_SUBMIT")}}</button>
     </div>
   </form>
 </div>
