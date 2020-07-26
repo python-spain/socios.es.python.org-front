@@ -4,10 +4,12 @@
     <div class="fieldset">
       <label for="full_name">{{ $t('FORM.INPUT_FULL_NAME_LABEL') }}</label>
       <input
-        id="full_name"
-        name="full_name"
+        id="name"
+        name="name"
         type="text"
         required
+        maxlength="100"
+        v-model.trim="data.name"
         :placeholder="$t('FORM.INPUT_FULL_NAME_PLACEHOLDER')"/>
     </div>
     <div class="fieldset">
@@ -17,6 +19,8 @@
         name="email"
         type="email"
         required
+        maxlength="75"
+        v-model.trim="data.email"
         :placeholder="$t('FORM.INPUT_EMAIL_PLACEHOLDER')"/>
     </div>
     <div class="fieldset">
@@ -26,6 +30,8 @@
         name="nif"
         type="text"
         required
+        maxlength="20"
+        v-model.trim="data.nif"
         :placeholder="$t('FORM.INPUT_NIF_PLACEHOLDER')"/>
     </div>
     <div class="fieldset">
@@ -44,6 +50,8 @@
         name="banck_account"
         type="text"
         required
+        maxlength="30"
+        v-model.trim="data.bankAccount"
         :placeholder="$t('FORM.INPUT_BANK_ACCOUNT_PLACEHOLDER')"/>
     </div>
     <div class="fieldset">
@@ -60,6 +68,7 @@
         id="comment"
         name="comment"
         rows="8"
+        v-model.trim="data.comment"
         :placeholder="$t('FORM.INPUT_COMMENT_PLACEHOLDER')"/>
     </div>
     <div class="actions">

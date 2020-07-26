@@ -6,6 +6,6 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class PyHeader extends Vue {
-  public readonly rootI18nKey = 'COMMONS.HEADER'
+  public readonly rootI18nKey = 'COMMONS.HEADER';
 }
 </script>
