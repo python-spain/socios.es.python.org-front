@@ -1,20 +1,20 @@
-abstract class AbstractStorageManager {
-  private storage: Storage;
+class AbstractStorageManager {
+  _storage = null
 
-  constructor (storage: Storage) {
-    this.storage = storage
+  constructor (storage) {
+    this._storage = storage
   }
 
-  public get (key: string) {
+  get (key) {
     try {
-      return JSON.parse(this.storage.getItem(key) || '')
+      return JSON.parse(this._storage.getItem(key) || '')
     } catch (error) {
       return undefined
     }
   }
 
-  public set (key: string, newValue?: {}) {
-    this.storage.setItem(
+  set (key, newValue) {
+    this._storage.setItem(
       key,
       JSON.stringify(newValue)
     )
@@ -22,14 +22,14 @@ abstract class AbstractStorageManager {
     return newValue
   }
 
-  public remove (key: string) {
-    this.storage.removeItem(key)
+  remove (key) {
+    this._storage.removeItem(key)
 
     return true
   }
 
-  public clear () {
-    this.storage.clear()
+  clear () {
+    this._storage.clear()
 
     return true
   }

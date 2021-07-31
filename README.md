@@ -1,4 +1,4 @@
-# front.socios.es.python.org
+# socies.es.python.org
 
 ## Project setup
 ```

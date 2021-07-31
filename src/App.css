@@ -40,6 +40,12 @@ a {
   }
 }
 
+code {
+  background-color: var(--color-grayscale100);
+  border-radius: 3px;
+  @mixin typography numbers-2;
+}
+
 /* Main App */
 .host-app {
   & .header {
@@ -47,6 +53,12 @@ a {
   }
 
   & .layout {
-    margin: var(--spacing8) var(--spacing16);
+    display: flex;
+    justify-content: center;
+    margin: var(--spacing8) auto;
+
+    & .layout-content {
+      max-width: 1600px;
+    }
   }
 }

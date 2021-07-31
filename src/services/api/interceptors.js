@@ -1,17 +1,7 @@
-import { AxiosResponse, AxiosError } from 'axios'
-
-declare class Error {
-  protected static captureStackTrace(error: Error, constructorOpt: any): any;
-  public name: string;
-  public message: string;
-  public stack: string;
-  constructor(message?: string);
-}
-
 export class ApiError extends Error {
-  public code: string;
+  code;
 
-  constructor (code: string, ...params: any[]) {
+  constructor (code, ...params) {
     // Pass remaining arguments (including vendor specific ones) to parent constructor
     super(...params)
 
@@ -29,12 +19,12 @@ export class ApiError extends Error {
 
 // const tokenExpiredErrorHandler = (res: AxiosResponse, code: string, message: string) => {}
 
-const defaultApiErrorHandler = (res: AxiosResponse, code: string, message: string): Promise<AxiosResponse<any>> => {
+const defaultApiErrorHandler = (res, code, message) => {
   return Promise.reject(new ApiError(code, message))
 }
 
-export const responseInterceptor = (res: AxiosResponse): any => {
-  if (res.data.data && !res.data.errors) {
+export const responseInterceptor = (res) => {
+  if (!res.data.errors) {
     return res.data.data
   }
 
@@ -48,6 +38,6 @@ export const responseInterceptor = (res: AxiosResponse): any => {
   }
 }
 
-export const responseErrorInterceptor = (error: AxiosError) => {
+export const responseErrorInterceptor = (error) => {
   return Promise.reject(error.message)
 }

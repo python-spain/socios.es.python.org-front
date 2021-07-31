@@ -21,43 +21,43 @@
   --font-family-heading-1: "Montserrat", sans-serif;
   --font-weight-heading-1: 400;
   --font-variant-heading-1: normal;
-  --font-size-heading-1: var(--font-size-700);
-  --line-height-heading-1: var(--font-size-900);
+  --font-size-heading-1: var(--font-size-900);
+  --line-height-heading-1: var(--font-size-1000);
 
   /* Heading 2 */
   --font-family-heading-2: "Montserrat", sans-serif;
   --font-weight-heading-2: 400;
   --font-variant-heading-2: normal;
-  --font-size-heading-2: var(--font-size-600);
-  --line-height-heading-2: var(--font-size-700);
+  --font-size-heading-2: var(--font-size-700);
+  --line-height-heading-2: var(--font-size-900);
 
   /* Heading 3 */
   --font-family-heading-3: "Montserrat", sans-serif;
   --font-weight-heading-3: 400;
   --font-variant-heading-3: all-small-caps;
-  --font-size-heading-3: var(--font-size-500);
-  --line-height-heading-3: var(--font-size-600);
+  --font-size-heading-3: var(--font-size-600);
+  --line-height-heading-3: var(--font-size-700);
 
   /* Heading 4 */
   --font-family-heading-4: "Montserrat", sans-serif;
   --font-weight-heading-4: 400;
   --font-variant-heading-4: normal;
-  --font-size-heading-4: var(--font-size-400);
-  --line-height-heading-4: var(--font-size-500);
+  --font-size-heading-4: var(--font-size-500);
+  --line-height-heading-4: var(--font-size-600);
 
   /* Body 1 */
   --font-family-body-1: "Fira Sans", sans-serif;
   --font-weight-body-1: 400;
   --font-variant-body-1: normal;
-  --font-size-body-1: var(--font-size-400);
+  --font-size-body-1: var(--font-size-500);
   --line-height-body-1: var(--font-size-600);
 
   /* Body 2 */
   --font-family-body-2: "Fira Sans", sans-serif;
   --font-weight-body-2: 400;
   --font-variant-body-2: normal;
-  --font-size-body-2: var(--font-size-300);
-  --line-height-body-2: var(--font-size-400);
+  --font-size-body-2: var(--font-size-400);
+  --line-height-body-2: var(--font-size-600);
 
   /* Numbers 1 */
   --font-family-numbers-1: "Fira Sans", sans-serif;
@@ -84,13 +84,13 @@
   --font-family-menu: "Montserrat", sans-serif;
   --font-weight-menu: 500;
   --font-variant-menu: normal;
-  --font-size-menu: var(--font-size-400);
-  --line-height-menu: var(--font-size-500);
+  --font-size-menu: var(--font-size-500);
+  --line-height-menu: var(--font-size-600);
 
   /* Button */
   --font-family-button: "Montserrat", sans-serif;
   --font-weight-button: 600;
   --font-variant-button: normal;
-  --font-size-button: var(--font-size-400);
-  --line-height-button: var(--font-size-500);
+  --font-size-button: var(--font-size-500);
+  --line-height-button: var(--font-size-600);
 }

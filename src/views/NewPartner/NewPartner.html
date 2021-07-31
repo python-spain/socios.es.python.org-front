@@ -1,82 +1,111 @@
 <div class="host-new-partner">
-  <h2>{{ $t('TITLE') }}</h2>
-  <form
-   class="form"
-   autocomplete="off"
-   @submit.prevent="handleSubmit()">
-    <div class="fieldset">
-      <label for="full_name">{{ $t('FORM.INPUT_FULL_NAME_LABEL') }}</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        required
-        maxlength="100"
-        v-model.trim="data.name"
-        :placeholder="$t('FORM.INPUT_FULL_NAME_PLACEHOLDER')"/>
+  <h2>¡Hazte socie!</h2>
+  <div class="content">
+    <div class="explanation">
+      <p>Antes de nada: ¡muchas gracias! El proceso para asociarte es muy sencillo:</p>
+      <ol>
+        <li>Haz una transferencia de 30€¹ a <code>ES18 1491 0001 2230 0008 5378</code> indicando en el asunto tu <strong>DNI/NIE/pasaporte</strong> y en destinatario <strong>"Asociación Python España"</strong>.</li>
+        <li>Rellena el siguiente formulario³. Si lo deseas, puedes obtener una cuenta de la Asociación bajo el dominio @es.python.org⁴ confirmándolo en el correo de alta.</li>
+        <li>En unos días la Junta Directiva aprobará tu solicitud y nos pondremos en contacto contigo.</li>
+      </ol>
+      <p>¡No olvides decir <i>«¡Hola!»</i> cuando rellenes el campo de Comentario! Y si encima tienes un momento para presentarte y hablarnos un poco de ti, mejor aún :)</p>
+      <div class="food-notes">
+        <p>¹ Durante la segunda mitad del año (julio-diciembre inclusive) el pago será de 15€.</p>
+        <p>² Si no deseas domiciliar el pago, omite el IBAN. El próximo febrero te tocará pagar la cuota completa del año (¡te lo recordaremos!).</p>
+        <p>³ Tambien puedes mándanos un correo a <a mailto="alta@es.python.org">alta@es.python.org</a> con asunto <strong>"Alta nuevo socio"</strong> adjuntando tu documento de identidad (DNI/NIE/pasaporte) escaneado, tu teléfono de contacto, el comprobante de pago y tu IBAN² para domiciliar el pago.</p>
+
+        <p>⁴ La cuenta @es.python.org te brindará acceso a todos los servicios habilitados en nuestro Workspace de Google, incluyendo 30GB personales en Drive.</p>
+      </div>
     </div>
-    <div class="fieldset">
-      <label for="email">{{ $t('FORM.INPUT_EMAIL_LABEL') }}</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        required
-        maxlength="75"
-        v-model.trim="data.email"
-        :placeholder="$t('FORM.INPUT_EMAIL_PLACEHOLDER')"/>
-    </div>
-    <div class="fieldset">
-      <label for="nif">{{ $t('FORM.INPUT_NIF_LABEL') }}</label>
-      <input
-        id="nif"
-        name="nif"
-        type="text"
-        required
-        maxlength="20"
-        v-model.trim="data.nif"
-        :placeholder="$t('FORM.INPUT_NIF_PLACEHOLDER')"/>
-    </div>
-    <div class="fieldset">
-      <label for="file_nif">{{ $t('FORM.INPUT_FILE_NIF_LABEL') }}</label>
-      <input
-        id="filr_nif"
-        name="file_nif"
-        type="file"
-        multiple
-        required />
-    </div>
-    <div class="fieldset">
-      <label for="banck_account">{{ $t('FORM.INPUT_BANK_ACCOUNT_LABEL') }}</label>
-      <input
-        id="banck_account"
-        name="banck_account"
-        type="text"
-        required
-        maxlength="30"
-        v-model.trim="data.bankAccount"
-        :placeholder="$t('FORM.INPUT_BANK_ACCOUNT_PLACEHOLDER')"/>
-    </div>
-    <div class="fieldset">
-      <label for="file_payment">{{ $t('FORM.INPUT_FILE_PAYMENT_LABEL') }}</label>
-      <input
-        id="filr_payment"
-        name="file_payment"
-        type="file"
-        required />
-    </div>
-    <div class="fieldset">
-      <label for="coment">{{ $t('FORM.INPUT_COMMENT_LABEL') }}</label>
-      <textarea
-        id="comment"
-        name="comment"
-        rows="8"
-        v-model.trim="data.comment"
-        :placeholder="$t('FORM.INPUT_COMMENT_PLACEHOLDER')"/>
-    </div>
-    <div class="actions">
-      <button type="reset" :disabled="isLoading">{{ $t("FORM.BUTTON_RESET")}}</button>
-      <button type="submit" :disabled="isLoading">{{ $t("FORM.BUTTON_SUBMIT")}}</button>
-    </div>
-  </form>
+    <form
+     class="form"
+     autocomplete="off"
+     @submit.prevent="handleSubmit()">
+      <div class="fieldset">
+        <label for="full_name">Tu nombre y apellidos</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          required
+          maxlength="100"
+          v-model.trim="form.name"
+          placeholder="Ex.: Guido van Rossum"/>
+      </div>
+      <div class="fieldset">
+        <label for="email">Un email válido</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          maxlength="75"
+          v-model.trim="form.email"
+          placeholder="Ex.: guido@python.org"/>
+      </div>
+      <div class="fieldset">
+        <label for="phone">Un teléfono de contacto (es opcional)</label>
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          size="15"
+          v-model.trim="form.phone"
+          placeholder="Ex.: 999123123"/>
+      </div>
+      <div class="fieldset">
+        <label for="nif">Tu DNI, NIF, NIE, Pasaporte o similar</label>
+        <input
+          id="nif"
+          name="nif"
+          type="text"
+          required
+          maxlength="20"
+          v-model.trim="form.nif"
+          placeholder="Ex.: 12345678Z"/>
+      </div>
+      <div class="fieldset">
+        <label for="identity_doc">Fichero con tu DNI, NIF, NIE o documento similar</label>
+        <input
+          id="identity_doc"
+          name="identity_doc"
+          type="file"
+          required
+          @change="handleIdentityDoc" />
+      </div>
+      <div class="fieldset">
+        <label for="banck_account">El IBAN de tu cuenta donde relaizaremos la domiciliación</label>
+        <input
+          id="banck_account"
+          name="banck_account"
+          type="text"
+          required
+          maxlength="30"
+          v-model.trim="form.bankAccount"
+          placeholder="Ex.: ES0011112222333344445555"/>
+      </div>
+      <div class="fieldset">
+        <label for="first_payment_doc">Fichero con el comprobante del pago de la primera cuota</label>
+        <input
+          id="first_payment_doc"
+          name="first_payment_doc"
+          type="file"
+          required
+          @change="handleFirstPaymentDoc" />
+      </div>
+      <div class="fieldset">
+        <label for="coment">Y puedes presentarte y dejarnos un comentario</label>
+        <textarea
+          id="comment"
+          name="comment"
+          rows="8"
+          v-model.trim="form.comment"
+          placeholder="Puedes contarnos cómo nos has conocido, por qué quieres pertenecer a la asociación o qué te gusta de Python :-)"/>
+      </div>
+      <div class="actions">
+        <button type="reset" :disabled="isLoading">Borrar todo</button>
+        <button type="submit" :disabled="isLoading">Enviar</button>
+      </div>
+    </form>
+  </div>
 </div>

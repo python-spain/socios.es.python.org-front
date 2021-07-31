@@ -2,9 +2,25 @@
   display: block;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.explanation {
+  max-width: 900px;
+  margin-right: var(--spacing4);
+
+  & .food-notes {
+    @mixin typography body-2, grayscale500;
+
+    font-style: italic;
+  }
+}
+
 .form {
   display: block;
-  padding: var(--spacing2);
+  max-width: 900px;
 
   & .fieldset {
     display: flex;

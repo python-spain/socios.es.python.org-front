@@ -1,32 +1,51 @@
 <template src="./NewPartner.html"></template>
 <style src="./NewPartner.css" scoped></style>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+<script>
+import api from '../../services/api'
 
-import { PartnerCreationData } from '@/types/partners'
 
-import newPartnerStore from './NewPartner.store'
+export default {
+  name: "NewPartner",
+  data: () => ({
+    form: {
+      name: '',
+      email: '',
+      nif: '',
+      identityDoc: null,
+      phone: '',
+      bankAccount: '',
+      firstPaymentDoc: null,
+      comment: ''
+    },
+    isLoading: false
+  }),
+  methods: {
+    handleIdentityDoc(event) {
+      this.form.identityDoc = event.target.files[0]
+    },
 
-@Component
-export default class NewPartner extends Vue {
-  public readonly rootI18nKey = 'VIEWS.NEW_PARTNER'
+    handleFirstPaymentDoc(event) {
+      this.form.firstPaymentDoc = event.target.files[0]
+    },
 
-  public data: PartnerCreationData = {
-    name: '',
-    email: '',
-    nif: '',
-    phone: '',
-    banckAccount: '',
-    comment: ''
-  }
+    async handleSubmit () {
+      this.isLoading = true
 
-  public isLoading = false
+      const formData = new FormData()
+      formData.append("name", this.form.name)
+      formData.append("email", this.form.email)
+      formData.append("nif", this.form.nif)
+      formData.append("identityDoc", this.form.identityDoc)
+      formData.append("phone", this.form.phone)
+      formData.append("bankAccount", this.form.bankAccount)
+      formData.append("firstPaymentDoc", this.form.firstPaymentDoc)
+      formData.append("comment", this.form.comment)
 
-  public async handleSubmit () {
-    this.isLoading = true
-    await newPartnerStore.createNewPartner(this.data)
-    this.isLoading = false
+      await api.partners.create(formData)
+
+      this.isLoading = false
+    }
   }
 }
 </script>

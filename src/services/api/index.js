@@ -1,5 +1,5 @@
-import axios, { AxiosInstance } from 'axios'
-import { localStorage } from '@/services/storage'
+import axios from 'axios'
+import { localStorage } from '../storage'
 
 import { responseInterceptor, responseErrorInterceptor } from './interceptors'
 import { transformRequest, transformResponse } from './transforms'
@@ -8,7 +8,7 @@ import Partners from './partners'
 
 export { ApiError } from './interceptors'
 
-export const client: AxiosInstance = axios.create({
+export const client = axios.create({
   baseURL: process.env.VUE_APP_API_URL
 })
 
@@ -18,7 +18,7 @@ client.defaults.headers.Accept = 'application/json'
 client.defaults.transformRequest = transformRequest
 client.defaults.transformResponse = transformResponse
 
-const setAuthorization = (jwtToken?: string) => {
+const setAuthorization = (jwtToken) => {
   if (jwtToken) {
     client.defaults.headers.common.Authorization = `JWT ${jwtToken}`
     localStorage.set('authToken', jwtToken)
@@ -28,7 +28,7 @@ const setAuthorization = (jwtToken?: string) => {
   }
 }
 
-const token: string = localStorage.get('authToken')
+const token = localStorage.get('authToken')
 if (token) {
   setAuthorization(token)
 }
