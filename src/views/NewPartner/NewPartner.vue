@@ -16,7 +16,9 @@ export default {
       phone: '',
       bankAccount: '',
       firstPaymentDoc: null,
-      comment: ''
+      comment: '',
+      isRgpdConsent: false,
+      allowNotifications: false
     },
     isLoading: false
   }),
@@ -41,6 +43,8 @@ export default {
       formData.append("bankAccount", this.form.bankAccount)
       formData.append("firstPaymentDoc", this.form.firstPaymentDoc)
       formData.append("comment", this.form.comment)
+      formData.append("isRgpdConsent", this.form.isRgpdConsent)
+      formData.append("allowNotifications", this.form.allowNotifications)
 
       await api.partners.create(formData)
 

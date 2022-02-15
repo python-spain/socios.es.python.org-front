@@ -27,6 +27,34 @@
     flex-direction: column;
     margin: var(--spacing3) 0;
     max-width: 50rem;
+
+    &.row {
+      flex-direction: row;
+      align-items: flex-start;
+
+      & :not(:last-child) {
+        margin-right: var(--spacing1);
+      }
+    }
+
+    &.explanation {
+      @mixin typography body-2, grayscale500;
+
+      font-style: italic;
+      margin: 0 var(--spacing4);
+
+      & p {
+        margin-top: 0;
+      }
+      & ul {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  & input[type="checkbox"] {
+    height: 1.5rem;
+    width: 1rem;
   }
 
   & .actions {
@@ -36,7 +64,8 @@
     max-width: 50rem;
 
     & :not(:last-child) {
-      margin-right: 1rem;
+      margin-right: var(--spacing2);
     }
   }
 }
+

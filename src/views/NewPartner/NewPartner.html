@@ -12,7 +12,7 @@
       <div class="food-notes">
         <p>¹ Durante la segunda mitad del año (julio-diciembre inclusive) el pago será de 15€.</p>
         <p>² Si no deseas domiciliar el pago, omite el IBAN. El próximo febrero te tocará pagar la cuota completa del año (¡te lo recordaremos!).</p>
-        <p>³ Tambien puedes mándanos un correo a <a mailto="alta@es.python.org">alta@es.python.org</a> con asunto <strong>"Alta nuevo socio"</strong> adjuntando tu documento de identidad (DNI/NIE/pasaporte) escaneado, tu teléfono de contacto, el comprobante de pago y tu IBAN² para domiciliar el pago.</p>
+        <p>³ Tambien puedes mándanos un correo a <a mailto="alta@es.python.org">alta@es.python.org</a> con asunto <strong>"Alta nuevo socie"</strong> adjuntando tu documento de identidad (DNI/NIE/pasaporte) escaneado, tu teléfono de contacto, el comprobante de pago y tu IBAN² para domiciliar el pago.</p>
 
         <p>⁴ La cuenta @es.python.org te brindará acceso a todos los servicios habilitados en nuestro Workspace de Google, incluyendo 30GB personales en Drive.</p>
       </div>
@@ -102,9 +102,37 @@
           v-model.trim="form.comment"
           placeholder="Puedes contarnos cómo nos has conocido, por qué quieres pertenecer a la asociación o qué te gusta de Python :-)"/>
       </div>
+      <div class="fieldset row">
+        <input
+          id="is_rgpd_consent"
+          name="is_rgpd_consent"
+          type="checkbox"
+          required
+          v-model.trim="form.isRgpdConsent" />
+        <label for="is_rgpd_consent">Autorizo a Python España a incluirme en su base de datos de socies y comunicarse conmigo para las gestiones necesarias.</label>
+      </div>
+      <div class="fieldset row">
+        <input
+          id="allow_notifications"
+          name="allow_notifications"
+          type="checkbox"
+          required
+          v-model.trim="form.allowNotifications" />
+        <label for="allow_notifications">Autorizo a Python España a enviarme información de las actividades y anuncios de la asociación.</label>
+      </div>
+      <div class="fieldset explanation">
+        <p>Tus datos serán incorporados a un fichero automatizado propiedad de la Asociación Python España con CIF-G86766821 y dirección Calle La Botánica, 4 1º, 28028, Madrid, España, según las condiciones previstas en la legislación vigente. Los derechos de acceso, rectificación y cancelación pueden ejercerse ante el Secretario de la Asociación <a href="mailto:secretaria@es.python.org">secretaria@es.python.org</a>. La Asociación Python España se compromete a no ceder a terceros dichos datos y a utilizarlos estrictamente para la gestión de la Asociación y de los envíos de material a los socies.</p>
+        <p>La recogida y tratamiento automatizado de los Datos Personales tiene como finalidad:
+          <ul>
+            <li>La gestión de socies de la Asociación.</li>
+            <li>El envío de información sobre los servicios y actividades propias de la Asociación.</li>
+          </ul>
+        </p>
+        <p>Python España se compromete al cumplimiento de su obligación de secreto con respecto a los datos de carácter personal suministrados y al deber de tratarlos con confidencialidad y reserva, conforme a la legislación vigente. A estos efectos adoptará las medidas necesarias para evitar su alteración, pérdida, tratamiento o acceso no autorizado. Así mismo te informamos de que, si lo deseas puede ejercitar los derechos previstos en el Art. 5 de la Ley a través del correo electrónico <a href="mailto:secretaria@es.python.org">secretaria@es.python.org</a>, seleccionando como asunto LOPD e indicando tu nombre completo, su DNI y el tipo de derecho que deseas ejercitar, Acceso, Rectificación, Cancelación u Oposición.</p>
+      </div>
       <div class="actions">
         <button type="reset" :disabled="isLoading">Borrar todo</button>
-        <button type="submit" :disabled="isLoading">Enviar</button>
+        <button type="submit" :disabled="isLoading || !form.allowNotifications || !form.isRgpdConsent">Enviar</button>
       </div>
     </form>
   </div>
